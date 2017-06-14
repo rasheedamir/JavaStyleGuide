@@ -4,26 +4,30 @@ Opinionated Java Style Guide based on [Google](https://google.github.io/stylegui
 
 And its a _work in progress_.
 
-## Introduction
+## 1 Introduction
 
 This document defines the coding standards for Java source files.
 
 Like other programming style guides, the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well. However, this document focuses primarily on the hard-and-fast rules that we follow universally, and avoids giving advice that isn't clearly enforceable (whether by human or tool).
 
-## Source File Basics
+## 2 Source File Basics
 
-### File encoding: UTF-8
+### 2.1 File encoding: UTF-8
 
 Source files must be encoded using `UTF-8`.
 
-### Indentation
+### 2.2 Indentation
 
 * Indentation uses _tabs_ (not spaces)
 * Unix (LF), not DOS (CRLF) line endings
 * Eliminate all trailing whitespace
   * On Linux, Mac, etc.: `find . -type f -name "*.java" -exec perl -p -i -e "s/[ \t]$//g" {} \;`
 
-## Source file structure
+### 2.3 File name
+
+The source file name consists of the case-sensitive name of the top-level class it contains (of which there is exactly one), plus the `.java` extension.
+
+## 3 Source file structure
 
 A source file consists of the following, in this exact order:
 
@@ -34,7 +38,7 @@ A source file consists of the following, in this exact order:
 
 Exactly one blank line separates each of the above sections.
 
-### License
+### 3.1 License
 
 Each source file must specify the following license at the very top of the file:
 
@@ -63,17 +67,17 @@ Then be sure to update it to 2016 accordingly:
 * Copyright 2002-2016 the original author or authors.
 ```
 
-### Import statements
+### 3.2 Import statements
 
-#### No wildcard imports
+#### 3.2.1 No wildcard imports
 
 Wildcard imports, static or otherwise, are not used.
 
-#### No line-wrapping
+#### 3.2.2 No line-wrapping
 
 Import statements are not line-wrapped. The column limit (Section 4.4, Column limit: 100) does not apply to import statements.
 
-#### Ordering and spacing
+#### 3.3.3 Ordering and spacing
 
 Imports are ordered as follows:
 
@@ -84,7 +88,7 @@ If there are both static and non-static imports, a single blank line separates t
 
 Within each block the imported names appear in ASCII sort order. (Note: this is not the same as the import statements being in ASCII sort order, since '.' sorts before ';'.)
 
-No static import for classes
+#### 3.2.4 No static import for classes
 
 Static import is not used for static nested classes. They are imported with normal imports.
 
@@ -110,6 +114,10 @@ Above all, the organization of the code should feel _natural_.
 ## Formatting
 
 ### Braces
+
+#### Braces are used where optional
+
+Braces are used with `if`, `else`, `for`, `do` and `while` statements, even when the body is empty or contains only a single statement.
 
 #### Block-like constructs: K&R style
 
