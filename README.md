@@ -5,14 +5,12 @@ Opinionated Java Style Guide based on [Google](https://google.github.io/stylegui
 And its a _work in progress_.
 
 ## Introduction
----
 
 This document defines the coding standards for Java source files.
 
 Like other programming style guides, the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well. However, this document focuses primarily on the hard-and-fast rules that we follow universally, and avoids giving advice that isn't clearly enforceable (whether by human or tool).
 
 ## Source File Basics
----
 
 ### File encoding: UTF-8
 
@@ -26,7 +24,6 @@ Source files must be encoded using `UTF-8`.
   * On Linux, Mac, etc.: `find . -type f -name "*.java" -exec perl -p -i -e "s/[ \t]$//g" {} \;`
 
 ## Source file structure
----
 
 A source file consists of the following, in this exact order:
 
@@ -111,7 +108,6 @@ Note that private or protected methods called from method implementations should
 Above all, the organization of the code should feel _natural_.
 
 ## Formatting
----
 
 ### Braces
 
