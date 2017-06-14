@@ -92,7 +92,9 @@ Within each block the imported names appear in ASCII sort order. (Note: this is 
 
 Static import is not used for static nested classes. They are imported with normal imports.
 
-### Java source file organization
+### 3.3 Class Declaration
+
+#### 3.3.1 Java source file organization - ordering of class contents
 
 The following governs how the elements of a source file are organized:
 
@@ -110,6 +112,12 @@ The following governs how the elements of a source file are organized:
 Note that private or protected methods called from method implementations should be placed immediately below the methods where they're used. In other words if there 3 interface method implementations with 3 private methods (one used from each), then the order of methods should include 1 interface and 1 private method in sequence, not 3 interface and then 3 private methods at the bottom.
 
 Above all, the organization of the code should feel _natural_.
+
+##### 3.3.1.1 Overloads: never split
+
+When a class has multiple constructors, or multiple methods with the same name, these appear sequentially, with no other code in between (not even private members).
+
+
 
 ## Formatting
 
